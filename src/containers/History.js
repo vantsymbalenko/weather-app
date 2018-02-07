@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../css/history.css';
+import selectFromHistory from '../actions/selectFromHistory';
+import HistoryElement from '../components/HistoryElement';
 
 class History extends Component{
 	render(){
 		return (
-			<ul>
-				{this.props.history.map((item, index) => {
-					return( <li key={index}>{item.name}</li>)
-				})}
+			<ul className="history-list">
+				{this.props.cityNames.map((item, index) => 
+					<HistoryElement 
+						key = {item}
+						cityName = {item}
+						selectFromHistory = {this.props.selectFromHistory}
+					/>
+				)}
 			</ul>
 		)
 	}
 }
 const mapStateToProps = (state) => {
 	return{
-		history : state.history
+		cityNames : state.history.map((item) => item.city.name)
 	}
 }
-export default connect(mapStateToProps)(History)
+
+const mapDispatchToProps = {
+	selectFromHistory : selectFromHistory
+}
+export default connect(mapStateToProps, mapDispatchToProps)(History)

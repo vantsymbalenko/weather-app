@@ -1,0 +1,28 @@
+ul.history-list{
+	/*border: 1px solid black;*/
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-gap: 5px;
+}
+
+.history-list li{
+	list-style: none;
+	/*border: 1px solid black;*/
+	font-size: 18px;
+	color: gray;
+	transition: 375ms;
+	border-bottom: 1px solid white;
+	text-align: center;
+}
+
+.history-list li:hover{
+	color: white;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 720px){
+	ul.history-list{
+		grid-template-columns: repeat(5, 1fr);
+	}
+}

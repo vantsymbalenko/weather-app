@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import '../css/history.css';
-import selectFromHistory from '../actions/selectFromHistory';
+import PropTypes from 'prop-types';
+
 import HistoryElement from '../components/HistoryElement';
+
+import selectFromHistory from '../actions/selectFromHistory';
+import '../css/history.css';
 
 class History extends Component{
 	render(){
@@ -10,8 +13,8 @@ class History extends Component{
 			<ul className="history-list">
 				{this.props.cityNames.map((item, index) => 
 					<HistoryElement 
-						key = {item}
-						cityName = {item}
+						key 	 		  = {item}
+						cityName 		  = {item}
 						selectFromHistory = {this.props.selectFromHistory}
 					/>
 				)}
@@ -19,6 +22,7 @@ class History extends Component{
 		)
 	}
 }
+
 const mapStateToProps = (state) => {
 	return{
 		cityNames : state.history.map((item) => item.city.name)
@@ -28,4 +32,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
 	selectFromHistory : selectFromHistory
 }
-export default connect(mapStateToProps, mapDispatchToProps)(History)
+
+History.propTypes = {
+	cityNames 		  : PropTypes.arrayOf(PropTypes.string),
+	selectFromHistory : PropTypes.func.isRequired
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(History);

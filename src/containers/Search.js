@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import setRequest from '../actions/setRequest';
 import '../css/search.css';
 
@@ -11,22 +13,27 @@ class Search extends Component{
 	render(){
 		return (
 			<div className="search">
-			<div className="search-field">
-				<input 
-					type="text" 
-					placeholder="Weather in city ..."
-					ref = {input => {this.searchInput = input}} 
-				/>
-			</div>
-			<div className="search-button">
-				<button onClick = {this.search}>Search</button>
-			</div>
+				<div className="search-field">
+					<input 
+						type="text" 
+						placeholder="Weather in city ..."
+						ref = {input => {this.searchInput = input}} 
+					/>
+				</div>
+				<div className="search-button">
+					<button onClick = {this.search}>Search</button>
+				</div>
 			</div>
 		)
 	}
 }
+
 const mapDispatchToProps = {
 	setRequest : setRequest
+}
+
+Search.propTypes = {
+	setRequest : PropTypes.func.isRequired
 }
 
 export default connect(null, mapDispatchToProps)(Search)

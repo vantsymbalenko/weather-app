@@ -1,6 +1,5 @@
 .one-day{
 	width: 100%;
-	/*border: 1px solid black;*/
 	background: #7dabdb;
 	color: white;
 
@@ -13,29 +12,14 @@
 	padding: 5px;
 }
 .one-day > div {
-	/*border: 1px solid black;*/
 	display: inline-block;
-	/*padding: 5px;*/
 	font-size: 14px;
 }
 .one-day .caption div{
 	display: grid;
 	grid-template-columns: repeat(9, 1fr);
-	/*grid-column-gap: 20px;*/
 }
 .one-day .caption div span:first-child{
 	display: inline-block;
-	width: 110px;
+	width: 130px;
 }
-
-/*.one-day > .caption >div >  span{
-	display: inline-block;
-	width: 120px;
-}*/
-/*{this.props.oneDay.map((item,index) => <HoursWeather 
-						hours = {item.dt_txt.split(" ")[1].split(":")[0] + ":" + item.dt_txt.split(" ")[1].split(":")[1]}
-						temp = {Math.round(item.main.temp - 273)}
-						pressure = {item.main.pressure}
-						wind =  {item.wind.speed}
-						clouds = {item.clouds.all}
-					/>)}*/

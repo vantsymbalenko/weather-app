@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class HistoryElement extends Component{
-	selectFromHistory  = () => {
-		this.props.selectFromHistory(this.props.cityName);
+export default function HistoryElement(props){
+	const selectFromHistory  = () => {
+		props.selectFromHistory(props.cityName);
 	}
-	render(){
-		return <li onClick = {this.selectFromHistory}>{this.props.cityName}</li>
-	}
+	return <li onClick = {selectFromHistory}>{props.cityName}</li>
+}
+
+HistoryElement.propTypes = {
+	cityName 			: PropTypes.string.isRequired,
+	selectFromHistory 	: PropTypes.func.isRequired
 }

@@ -11,24 +11,19 @@ export default function request (state = initialState, action){
 			return newState; 
 		}
 		case "IS_LOADING": {
-			let newState = {
+			return {
 				isLoading : true,
 				history : [...state.history]
-			}
-			// let newState = JSON.parse(JSON.stringify(state));
-			// newState.isLoading = true;
-			return newState;
+			};
 		}
 		case "IS_ERROR" : {
-			let newState = {
+			return {
 				isLoading: false,
 				history : [...state.history],
 				error : action.payload,
 			};
-			// newState.error = action.payload;
-			return newState;
 		}
-		case "IS_ACCESS" : {
+		case "IS_SUCCESS" : {
 			let newState = {
 				isLoading: false,
 				inProcess : action.payload,

@@ -3,11 +3,9 @@
 	margin: 60px auto 0px auto;
 	display: grid;
 	grid-template-columns: 6fr 1fr;
-	/*border: 1px solid black;*/
 }
 
 .search .search-field {
-	/*border: 1px solid black;*/
 	color: #7cb8d1;
 }
 .search .search-field input {
@@ -17,9 +15,6 @@
 	color: #8d8e8e;
 	border: none;
 	border-radius: 2px 0px 0px 2px;
-}
-.search .search-button{
-	/*border: 1px solid black;*/
 }
 .search .search-button button{
 	width: 100%;

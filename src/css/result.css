@@ -1,106 +1,22 @@
-/*.city-result{
-	background: rgba(256,256,256,0.5);
-	margin-top: 20px;
-	border-radius: 10px;
-}
-.city-result .one-day{
-	padding: 20px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 4fr;
-	transition: 375ms;
-}
-.city-result .header-element .date{
-	line-height: 50px;
-}
-.city-result .one-day:hover{
-	background: rgb(256, 256, 256);
-}
-.city-result .one-day:first-child:hover{
-	border-radius: 10px 10px 0px 0px;
-}*/
-/*.city-result .header-element div{
-	text-align: center;
-	font-size: 18px;
-	font-weight: 600;
-}*/
-/*.city-result .header-element .info{
-	border: 1px solid black;
-	display: grid;
-	grid-row-gap: 5px;
-	grid-column-gap: 5px;
-	grid-template-areas: 
-		"max-temp min-temp description"
-		"wind-speed wind-speed wind-speed"
-		"clouds pressure pressure"
-}
-.city-result .header-element .info .max-temp{
-	grid-area: max-temp;
-	background: orange;
-	text-align: center;
-	width: 80px;
-	border-radius: 5px;
-}
-.city-result .header-element .info .min-temp{
-	grid-area: min-temp;
-	background: orange;
-	text-align: center;
-	width: 80px;
-	border-radius: 5px;
-}
-.city-result .header-element .info .description{
-	grid-area: description;
-	font-style: italic;
-}
-.city-result .header-element .info .wind-speed{
-	grid-area: wind-speed;
-}
-.city-result .header-element .info .clouds{
-	grid-area: clouds;
-}
-.city-result .header-element .info .pressure{
-	grid-area: pressure;
-/*}*/
-
-/*<div className="one-day">
-					<div className="date">Tue 6 Feb</div>
-					<div className="image"><img src={img} alt={main} title={main}/></div>
-					<div className="info">
-						<div className="max-temp">{maxTemp} &#176;C</div>
-						<div className="min-temp">{minTemp} &#176;C</div>
-						<div className="description">{description}</div>
-						<div className="wind-speed">{windSpeed} m/s</div>
-						<div className="clouds">{clouds} %</div>
-						<div className="pressure">{pressure} hpa</div>
-					</div>
-				</div>*/
-
-
-
-
-
-
 ul{
 	display: grid;
 }
 ul li{
 	list-style: none;
 }
+
 .six-list-element{
 	grid-template-columns: repeat(6, 1fr);
 }
 .five-list-element{
 	grid-template-columns: repeat(5, 1fr);
 }
-
 .header-element {
   margin-top: 10px;	
   padding: 0px 5px 0px 5px;
-  /*width: 160px;*/
-  /*height: 210px;*/
   background: #7dabdb;
   border-radius: 5px;
   border: 1px solid gray;
-  /*border-bottom: none;*/
   color: white;
 }
 .selected{
@@ -146,10 +62,6 @@ ul li{
   padding-left: 10px;
   transition: 375ms;
 }
-/*.header-element .other-info div:hover {
-  background: lightgray;
-  cursor: pointer;
-}*/
 .header-element .other-info span {
   display: inline-block;
   width: 60px;
